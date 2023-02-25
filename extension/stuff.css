@@ -1,0 +1,25 @@
+.big {
+    background-color: azure;
+    color:black;
+    width: 33%;
+    height: fit-content;
+    border: 2px, red;
+    content: "\a";
+    
+}
+
+.title {
+    background-color:bisque;
+    text-align: left;
+    font-size: 20px;
+}
+
+.text {
+    background-color: aqua;
+    text-align: center;
+    color: black;
+    width: 100%;
+    height: fit-content;
+    display: block;
+    font-size: 15px;
+}
