@@ -7,7 +7,7 @@ app.use(express.json());
 
 const PORT = 3000;
 const COMPLETION_TEMPERATURE = 0.6;
-const MAX_TOKENS = 1000;
+const MAX_TOKENS = 3000;
 
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
@@ -15,7 +15,6 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 app.get("/", (req, res) => {
-  // res.send(JSON.stringify({ key: OPEN_AI_API_KEY }));
   res.sendfile("pages/image (1).png");
 });
 
