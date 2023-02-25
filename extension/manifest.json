@@ -14,7 +14,15 @@
             "matches": [
                 "https://www.google.com/search*"
             ],
-            "js": ["content.js"]
+            "js": ["content.js"],
+            "css": ["stuff.css"]
         }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "webRequest",
+        "nativeMessaging"
     ]
 }

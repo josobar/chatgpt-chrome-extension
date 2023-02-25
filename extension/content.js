@@ -1,4 +1,5 @@
 console.log("sfadflas;df");
+
 document.body.onload = addElement;
 
 function addElement() {
@@ -20,7 +21,15 @@ function addElement() {
   const newDiv = document.createElement("span");
   newDiv.id = "ChatGPT Google";
   newDiv.className = "text";
-  const text = document.createTextNode(document.querySelector("input").value);
-  newDiv.appendChild(text);
+  const text = document.createTextNode("");
   bigDiv.appendChild(newDiv);
+  searchInput = document.querySelector("input").value;
+
+  chrome.runtime.sendMessage({ prompt: searchInput }, (res) => {
+    console.log(res.result);
+    text = createTextNode(res.result);
+    // text.nodeValue = res.result;
+  });
+
+  newDiv.appendChild(text);
 }
