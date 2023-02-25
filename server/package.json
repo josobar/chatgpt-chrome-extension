@@ -1,0 +1,26 @@
+{
+  "name": "chatgpt-chrome-extension",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon pages/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josobar/chatgpt-chrome-extension.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/josobar/chatgpt-chrome-extension/issues"
+  },
+  "homepage": "https://github.com/josobar/chatgpt-chrome-extension#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "next": "^13.2.1",
+    "openai": "^3.1.0"
+  }
+}
