@@ -1,13 +1,15 @@
 import { Configuration, OpenAIApi } from "openai";
 import express, { json } from "express";
 import {} from "dotenv/config";
+import cors from "cors";
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 const PORT = 3000;
 const COMPLETION_TEMPERATURE = 0.6;
-const MAX_TOKENS = 3000;
+const MAX_TOKENS = 1000;
 
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
@@ -27,8 +29,16 @@ app.post("/generate", async (req, res) => {
       temperature: COMPLETION_TEMPERATURE,
       max_tokens: MAX_TOKENS,
     });
+    res.set({
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
+    });
     res.status(200).json({ result: completion.data.choices[0].text });
   } catch (error) {
+    res.set({
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
+    });
     if (error.response) {
       console.error(error.response.status, error.response.data);
       res.status(error.response.status).json(error.response.data);
