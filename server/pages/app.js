@@ -35,10 +35,6 @@ app.post("/generate", async (req, res) => {
     });
     res.status(200).json({ result: completion.data.choices[0].text });
   } catch (error) {
-    res.set({
-      "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "*",
-    });
     if (error.response) {
       console.error(error.response.status, error.response.data);
       res.status(error.response.status).json(error.response.data);
@@ -53,6 +49,4 @@ app.post("/generate", async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log("SERVER ONLINE :3");
-});
+app.listen(PORT, () => {});
