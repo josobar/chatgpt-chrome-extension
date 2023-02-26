@@ -1,3 +1,4 @@
+
 function addElement() {
     const bigDiv = document.createElement("div");
         bigDiv.id = "BigDiv";
@@ -19,6 +20,14 @@ function addElement() {
         const text = document.createTextNode(document.querySelector('input').value);
         newDiv.appendChild(text);
         bigDiv.appendChild(newDiv);
+        
+        chrome.runtime.sendMessage({ prompt: searchInput }, (res) => {
+          console.log(res.result);
+          text = createTextNode(res.result);
+          // text.nodeValue = res.result;
+        });
+        
+        newDiv.appendChild(text);
 }
 
 console.log("poopoo");
@@ -44,9 +53,4 @@ chrome.storage.sync.get(["desiredMethod"]).then((result) => {
         console.log("already out");
     }
 });
-
-
-
-
-
 
