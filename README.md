@@ -5,8 +5,10 @@ First, ```git clone``` this repository.
 ### Setting up the NodeJS server
 1. If you haven't already, install the [NodeJS runtime environment](https://nodejs.org).
 2. Use your terminal to navigate to ```/server``` in the cloned repo.
-3. Run ```npm install```.
-4. Run ```npm run start``` to start the server. This server must be running whenever you use the exension locally. If it isn't running, the extension won't work.
+3. Run ```npm install```. (Your only need to do this step once)
+4. Log into or create an OpenAI account and [generate an api key](https://platform.openai.com/account/api-keys)
+5. Create a new file in ```/server``` called ```.env```. Type ```OPENAI_API_KEY=your-key-here``` into the file and save it. (Replace the text with your new key)
+6. Run ```npm run start``` to start the server. This server must be running whenever you use the exension locally. If it isn't running, the extension won't work.
 
 ### Loading the Chrome extension 
 1. Navigate to chrome://extensions in your Google Chrome browser.
