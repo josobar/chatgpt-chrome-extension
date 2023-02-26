@@ -36,7 +36,7 @@ chrome.storage.sync.get(["desiredMethod"]).then((result) => {
     addElement();
   } else {
     const testDiv = document.createElement("button");
-    const testText = document.createTextNode("Toggle");
+    const testText = document.createTextNode("Toggle ChatGPT");
     testDiv.id = "epicbutton";
     testDiv.appendChild(testText);
     document.getElementsByClassName("IC1Ck")[0].append(testDiv);
