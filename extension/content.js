@@ -8,7 +8,7 @@ function addElement() {
   const titleDiv = document.createElement("span");
   titleDiv.id = "Title Div";
   titleDiv.className = "title";
-  const titleText = document.createTextNode("ChatGPT for Google");
+  const titleText = document.createTextNode("ChatGPT");
   titleDiv.appendChild(titleText);
   bigDiv.appendChild(titleDiv);
 
