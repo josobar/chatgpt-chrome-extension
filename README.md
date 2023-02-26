@@ -1,5 +1,4 @@
-# ChatGPT for Google Chrome
-# HackIllinois 2023
+# ChatGPT for Google Chrome | HackIllinois 2023
 
 ## Setup
 First, ```git clone``` this repository.
