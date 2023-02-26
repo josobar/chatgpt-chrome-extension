@@ -13,7 +13,7 @@ First, ```git clone``` this repository.
 ### Loading the Chrome extension 
 1. Navigate to chrome://extensions in your Google Chrome browser.
 2. Turn "developer mode" on using the switch in the top right.
-3. Click the "Load unpacked" button in the top left and select the "extension" folder in the cloned repo.
+3. Click the "Load unpacked" button in the top left and select the ```/extension``` folder in the cloned repo.
 4. Make sure the switch near the newly uploaded is on so that the extension is enabled. 
 
 ## Use
