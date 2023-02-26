@@ -1,10 +1,12 @@
 .big {
-    background-color: azure;
+    background-color: aqua;
     color:black;
     width: 33%;
     height: fit-content;
     border: 2px, red;
-    content: "\a";
+    content: "\n";
+    word-break: break-word;
+    white-space: pre-wrap;
     
 }
 
@@ -15,10 +17,10 @@
 }
 
 .text {
-    background-color: aqua;
-    text-align: center;
+    text-align: left;
     color: black;
-    width: 100%;
+    width: 80%;
+    margin-left: 2%;
     height: fit-content;
     display: block;
     font-size: 15px;
