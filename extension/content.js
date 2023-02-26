@@ -33,6 +33,8 @@ function addElement() {
 
 console.log("poopoo");
 
+var onscreen = false;
+
 chrome.storage.sync.get(["desiredMethod"]).then((result) => {
   console.log(result);
   console.log(result.desiredMethod);
@@ -40,18 +42,23 @@ chrome.storage.sync.get(["desiredMethod"]).then((result) => {
     console.log("in always");
     addElement();
   } else {
-    const buttonDiv = document.createElement("button");
-    buttonDiv.id = "epicbutton";
-    buttonDiv.className = "pootton";
-    const buttonText = document.createTextNode("Toggle");
-    buttonDiv.appendChild(buttonText);
-    document.getElementsByClassName("GyAeWb")[0].append(buttonDiv);
+    const testDiv = document.createElement("button");
+    const testText = document.createTextNode("Toggle");
+    testDiv.id = "epicbutton";
+    testDiv.appendChild(testText);
+    document.getElementsByClassName("IC1Ck")[0].append(testDiv);
 
     document
       .getElementById("epicbutton")
       .addEventListener("click", function () {
-        buttonDiv.remove();
-        addElement();
+        if (!onscreen) {
+          addElement();
+          onscreen = true;
+        } else {
+          console.log("Not on screen");
+          document.getElementById("BigDiv").remove();
+          onscreen = false;
+        }
       });
     console.log("already out");
   }
