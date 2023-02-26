@@ -18,3 +18,6 @@ First, ```git clone``` this repository.
 
 After setting up, ChatGPT for Chrome will always be visible by default. 
 You can change this to the **toggle** setting in the extension's settings through chrome://extensions.
+
+##### Authors:
+Jason Barnett, Kenny Lin!!!
