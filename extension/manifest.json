@@ -23,7 +23,16 @@
     },
     "permissions": [
         "webRequest",
-        "blockingWebRequest",
-        "nativeMessaging"
-    ]
+        "declarativeNetRequestWithHostAccess",
+        "nativeMessaging",
+        "storage"
+    ],
+    "action": {
+        "default_icon": "images/test.jpg",
+        "default_title": "Hello there"
+    },
+    "options_ui": {
+        "page": "options.html",
+        "open_in_tab": false
+    }
 }

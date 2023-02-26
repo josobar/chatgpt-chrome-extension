@@ -1,4 +1,10 @@
+console.log("Hello");
 
-chrome.omnibox.onInputEntered.addListener(() => {
-  console.log("changed");
-});
+chrome.action.onClicked.addListener(buttonClicked);
+
+function buttonClicked(tab) {
+  let msg = {
+    txt: "hello"
+  }
+  chrome.tabs.sendMessage(tab.id, msg);
+}
